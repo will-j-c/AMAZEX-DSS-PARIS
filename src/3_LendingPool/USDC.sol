@@ -7,7 +7,6 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  * @title USDC
  */
 contract USDC is ERC20 {
-
     /**
      * @dev Constructor that mints USDC tokens to the contract creator
      * @param amount The amount of USDC tokens to mint

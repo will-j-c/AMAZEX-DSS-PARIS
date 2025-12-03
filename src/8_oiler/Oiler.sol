@@ -3,7 +3,6 @@ pragma solidity ^0.8.0;
 
 import {IERC20, ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-
 interface IAMM {
     function getPriceToken0() external returns (uint256);
 }
@@ -34,7 +33,6 @@ contract Oiler is ERC20 {
     }
 
     mapping(address => User) public users;
-
 
     constructor(address _token, address _amm) ERC20("Debt Token", "dTOKEN") {
         token = IERC20(_token);
@@ -133,7 +131,7 @@ contract Oiler is ERC20 {
      * @notice  Liquidates a user's position if their health factor falls below the liquidation threshold.
      * @param   _user The address of the user to liquidate.
      *  The process of liquidation involves repaying a portion of the user's debt,
-     *  burning debt tokens from the liquidator, and transferring all of 
+     *  burning debt tokens from the liquidator, and transferring all of
      *  the user's collateral to the liquidator.
      *  The user's borrow amount and collateral are then updated.
      */

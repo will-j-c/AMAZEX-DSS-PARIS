@@ -9,7 +9,6 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
  * @title CreateDeployer
  */
 contract CreateDeployer is Ownable {
-
     /**
      * @dev Constructor that sets the owner of the contract
      * @param _owner The address of the owner of the contract
@@ -30,7 +29,6 @@ contract CreateDeployer is Ownable {
             contractAddress = address(new LendingHack(owner(), _usdc));
         }
     }
-
 
     function cleanUp() public onlyOwner {
         selfdestruct(payable(address(0)));

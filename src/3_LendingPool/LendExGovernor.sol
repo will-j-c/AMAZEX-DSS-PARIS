@@ -20,7 +20,6 @@ interface IPool {
  * @title LendExGovernor
  */
 contract LendExGovernor is Ownable {
-
     mapping(address => bool) public acceptedContracts;
     USDC public usdc;
 

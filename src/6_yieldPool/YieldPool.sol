@@ -19,7 +19,7 @@ contract SecureumToken is ERC20("Secureum Token", "ST") {
 contract YieldPool is ERC20("Safe Yield Pool", "syLP"), IERC3156FlashLender {
     // The token address
     IERC20 public immutable TOKEN;
-    // An arbitrary address to represent Ether 
+    // An arbitrary address to represent Ether
     address public constant ETH = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
     // A constant to indicate a successful callback, according to ERC3156
     bytes32 private constant CALLBACK_SUCCESS = keccak256("ERC3156FlashBorrower.onFlashLoan");
@@ -45,9 +45,9 @@ contract YieldPool is ERC20("Safe Yield Pool", "syLP"), IERC3156FlashLender {
     }
 
     /**
-    * @notice The fee is 1%
-    * @inheritdoc IERC3156FlashLender
-    */
+     * @notice The fee is 1%
+     * @inheritdoc IERC3156FlashLender
+     */
     function flashFee(address, uint256 amount) public pure returns (uint256) {
         return amount / 100;
     }
@@ -79,8 +79,7 @@ contract YieldPool is ERC20("Safe Yield Pool", "syLP"), IERC3156FlashLender {
 
         if (token == ETH) {
             require(address(this).balance >= expected, "Flash loan not repayed");
-        }
-        else {
+        } else {
             require(getReserve() >= expected, "Flash loan not repayed");
         }
         return true;
@@ -182,7 +181,6 @@ contract YieldPool is ERC20("Safe Yield Pool", "syLP"), IERC3156FlashLender {
         TOKEN.transferFrom(msg.sender, address(this), _tokensSold);
         payable(msg.sender).transfer(ethBought);
     }
-
 
     receive() external payable {}
 }

@@ -9,9 +9,6 @@ import {YieldPool, SecureumToken, IERC20} from "../src/6_yieldPool/YieldPool.sol
 //    If you need a contract for your hack, define it below //
 ////////////////////////////////////////////////////////////*/
 
-
-
-
 /*////////////////////////////////////////////////////////////
 //                     TEST CONTRACT                        //
 ////////////////////////////////////////////////////////////*/
@@ -46,9 +43,6 @@ contract Challenge6Test is Test {
         // terminal command to run the specific test:       //
         // forge test --match-contract Challenge6Test -vvvv //
         ////////////////////////////////////////////////////*/
-
-
-
 
         //==================================================//
         vm.stopPrank();

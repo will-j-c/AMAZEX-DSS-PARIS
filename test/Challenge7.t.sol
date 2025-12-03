@@ -10,9 +10,6 @@ import {DaoVaultImplementation, FactoryDao, IDaoVault} from "../src/7_crystalDAO
 //    If you need a contract for your hack, define it below //
 ////////////////////////////////////////////////////////////*/
 
-
-
-
 /*////////////////////////////////////////////////////////////
 //                     TEST CONTRACT                        //
 ////////////////////////////////////////////////////////////*/
@@ -36,7 +33,6 @@ contract Challenge7Test is Test {
         deal(address(vault), 100 ether);
     }
 
-
     function testHack() public {
         vm.startPrank(whitehat, whitehat);
         /*////////////////////////////////////////////////////
@@ -45,9 +41,6 @@ contract Challenge7Test is Test {
         // terminal command to run the specific test:       //
         // forge test --match-contract Challenge7Test -vvvv //
         ////////////////////////////////////////////////////*/
-
-
-
 
         //==================================================//
         vm.stopPrank();

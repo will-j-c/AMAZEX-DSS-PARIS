@@ -5,7 +5,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 /**
  * @title AMM
- * @notice ASSUME THIS CONTRACT DOES NOT HAVE TECHNICAL VULNERABILITIES. 
+ * @notice ASSUME THIS CONTRACT DOES NOT HAVE TECHNICAL VULNERABILITIES.
  * Modified from: https://solidity-by-example.org/defi/constant-product-amm/
  */
 contract AMM {

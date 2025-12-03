@@ -11,8 +11,6 @@ import {PosiCoin} from "../src/4_RescuePosi/PosiCoin.sol";
 //    If you need a contract for your hack, define it below //
 ////////////////////////////////////////////////////////////*/
 
-
-
 /*////////////////////////////////////////////////////////////
 //                     TEST CONTRACT                        //
 ////////////////////////////////////////////////////////////*/
@@ -36,7 +34,6 @@ contract Challenge4Test is Test {
         POSI.transfer(unclaimedAddress, 1000 ether);
     }
 
-
     function testWhitehatRescue() public {
         vm.deal(whitehat, 10 ether);
         vm.startPrank(whitehat, whitehat);
@@ -46,9 +43,6 @@ contract Challenge4Test is Test {
         // terminal command to run the specific test:       //
         // forge test --match-contract Challenge4Test -vvvv //
         ////////////////////////////////////////////////////*/
-
-
-
 
         //==================================================//
         vm.stopPrank();

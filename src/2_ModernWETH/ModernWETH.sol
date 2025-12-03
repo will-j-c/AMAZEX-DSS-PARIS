@@ -8,7 +8,6 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  * @title ModernWETH: The Insecure Modern Wrapped Ether
  */
 contract ModernWETH is ERC20("Modern Insec Wrapped Ether", "mWETH"), ReentrancyGuard {
-    
     /**
      * @notice Deposit ether to get wrapped ether
      */
